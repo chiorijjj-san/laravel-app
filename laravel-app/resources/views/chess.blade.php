@@ -13,6 +13,7 @@
     <!-- Local scripts instead of CDN -->
     <script src="{{ asset('js/chess.min.js') }}"></script>
     <script src="{{ asset('js/chessboard.min.js') }}"></script>
+    @vite('resources/js/app.js')
 
     <script src="/js/app.js"></script>
     <script>
