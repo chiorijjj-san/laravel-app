@@ -30,7 +30,12 @@ class MessageSent
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('channel-name'),
+            new PrivateChannel('action'),
         ];
+    }
+
+    public function broadcastAs()
+    {
+        return 'message.sent';
     }
 }
