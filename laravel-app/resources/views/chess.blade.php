@@ -14,7 +14,9 @@
     <script src="{{ asset('js/chess.min.js') }}"></script>
     <script src="{{ asset('js/chessboard.min.js') }}"></script>
 
-    <script src="{{ mix('js/app.js') }}"></script>
+    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @else
 
     <script>
         window.Echo.private('action')
