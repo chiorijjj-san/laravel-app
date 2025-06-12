@@ -14,22 +14,16 @@
     <script src="{{ asset('js/chess.min.js') }}"></script>
     <script src="{{ asset('js/chessboard.min.js') }}"></script>
 
+    <script src="/js/app.js"></script>
     <script>
-        const game = new Chess();
-        const board = Chessboard('board', {
-            draggable: true,
-            position: 'start',
-            onDrop: function (source, target) {
-                const move = game.move({
-                    from: source,
-                    to: target,
-                    promotion: 'q'
-                });
-
-                if (move === null) return 'snapback';
-            }
-        });
+        window.Echo.private('action')
+            .listen('MoveMade', (e) => {
+                console.log('Move received:', e.move);
+                // Update gameState and re-render board here
+            });
     </script>
+
+    
 </body>
 
 </html>
