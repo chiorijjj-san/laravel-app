@@ -11,9 +11,13 @@
 
 <div id="board"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/chess.js@1/chess.min.js"></script>
-<script src="https://unpkg.com/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
-<script src="/js/app.js"></script> <!-- your compiled JS -->
+ <!-- ✅ Load chess.js FIRST -->
+    <script src="https://cdn.jsdelivr.net/npm/chess.js@1.0.0/chess.min.js"></script>
+
+    <!-- ✅ Then chessboard.js -->
+    <script src="https://unpkg.com/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+
+    <!-- ✅ Then your code that uses Chess -->
 <script>
     const game = new Chess();
     const board = Chessboard('board', {
