@@ -8,7 +8,7 @@
     </style>
 </head>
 <body>
-    <div id="board" style="width: 400px"></div>
+    <div id="chessboard" style="width: 400px"></div>
 
     <!-- Local scripts instead of CDN -->
     <script src="{{ asset('js/chess.min.js') }}"></script>
