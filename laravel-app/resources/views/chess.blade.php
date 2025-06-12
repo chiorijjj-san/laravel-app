@@ -14,7 +14,8 @@
     <script src="{{ asset('js/chess.min.js') }}"></script>
     <script src="{{ asset('js/chessboard.min.js') }}"></script>
 
-    <script src="/js/app.js"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
+
     <script>
         window.Echo.private('action')
             .listen('MoveMade', (e) => {
