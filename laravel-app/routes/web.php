@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('chess');
+    return view('index');
 });
 
 Route::post('/move', [ChessController::class, 'move']);
