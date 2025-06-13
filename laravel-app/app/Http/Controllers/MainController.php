@@ -20,9 +20,18 @@ class MainController extends Controller
 
     public function runRaw(Request $request)
     {
-        $response = DB::select($request->post('raw_query'));
-        echo "<pre>";
-        print_r($response);
+        $query = $request->input('raw_query'); // or ->post('raw_query')
+
+        try {
+            $response = DB::select($query);
+
+            echo "<pre>";
+            print_r($response);
+            echo "</pre>";
+        } catch (\Exception $e) {
+            echo "<pre>SQL Error: " . $e->getMessage() . "</pre>";
+        }
+
         die;
     }
 
