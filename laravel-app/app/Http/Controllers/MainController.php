@@ -19,10 +19,10 @@ class MainController extends Controller
 
     public function runRaw(Request $request)
     {
+        $response = DB::select($request->post('raw_query'));
+        echo "<pre>";
         print_r($request);
         die;
-        $response = DB::select($request->post('raw_query'));
-        return response()->json($response);
     }
 
 }
