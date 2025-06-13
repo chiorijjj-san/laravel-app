@@ -7,4 +7,5 @@ Route::get('/', function () {
 });
 
 Route::post('/move', [CMainController::class, 'move']);
-Route::post('/login', [CLoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
