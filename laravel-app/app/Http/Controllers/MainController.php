@@ -30,7 +30,7 @@ class MainController extends Controller
             $error = $e->getMessage();
         }
 
-        return view('query.result', [
+        return view('query-result', [
             'results' => $results,
             'error' => $error,
         ]);
