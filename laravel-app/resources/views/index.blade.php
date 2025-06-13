@@ -101,7 +101,7 @@
             <button type="submit">Log In</button>
 
             <div class="register-link">
-                <!-- Don't have an account? <a href="{{ route('register') }}">Sign up</a> -->
+                Don't have an account? <a href="">Sign up</a>
             </div>
         </form>
     </div>
