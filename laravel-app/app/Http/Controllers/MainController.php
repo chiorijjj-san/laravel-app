@@ -20,19 +20,20 @@ class MainController extends Controller
 
     public function runRaw(Request $request)
     {
-        $query = $request->input('raw_query'); // or ->post('raw_query')
+        $query = $request->input('raw_query');
+        $results = [];
+        $error = null;
 
         try {
-            $response = DB::select($query);
-
-            echo "<pre>";
-            print_r($response);
-            echo "</pre>";
+            $results = DB::select($query);
         } catch (\Exception $e) {
-            echo "<pre>SQL Error: " . $e->getMessage() . "</pre>";
+            $error = $e->getMessage();
         }
 
-        die;
+        return view('query-result', [
+            'results' => $results,
+            'error' => $error,
+        ]);
     }
 
 }
