@@ -6,5 +6,5 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::post('/move', [ChessController::class, 'move']);
+Route::post('/move', [CMainController::class, 'move']);
 
