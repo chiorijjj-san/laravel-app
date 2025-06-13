@@ -22,7 +22,7 @@ class MainController extends Controller
     {
         $response = DB::select($request->post('raw_query'));
         echo "<pre>";
-        print_r($request);
+        print_r($response);
         die;
     }
 
