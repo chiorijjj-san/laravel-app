@@ -13,6 +13,11 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
+// query routes
 Route::post('/query-result', [MainController::class, 'runRaw'])->name('raw.query');
-
 Route::get('/query', [MainController::class, 'requestQuery']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('posts', PostController::class);
+    Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
+});
