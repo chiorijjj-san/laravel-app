@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Live Chess Game</title>
+    <title>This is a website.</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <style>
         #board { width: 400px; margin: 20px auto; }
