@@ -33,3 +33,13 @@ Route::get('/portfolio', function () {
     return view('portfolio');
 });
 
+// deployer
+Route::post('/vmdeployer', function (Request $request) {
+    if ($request->header('X-DEPLOY-TOKEN') !== env('DEPLOY_TOKEN')) {
+        abort(403, 'Unauthorized.');
+    }
+
+    $output = shell_exec('sh ' . base_path('deploy.sh'));
+
+    return response($output, 200);
+});
