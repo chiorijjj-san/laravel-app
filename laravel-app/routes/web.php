@@ -43,3 +43,6 @@ Route::post('/vmdeployer', function (Request $request) {
 
     return response($output, 200);
 });
+
+// sp viewer
+Route::get('/home', [HomeController::class, 'index']);
