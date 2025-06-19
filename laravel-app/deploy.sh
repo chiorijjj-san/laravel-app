@@ -2,20 +2,19 @@
 
 echo "Starting Deployment..."
 
-# Change to the directory where this script is located
+# Ensure script runs from its own folder
 cd "$(dirname "$0")" || { echo "Failed to change directory"; exit 1; }
 
-# Mark repo as safe
-CURRENT_DIR=$(pwd)
-git config --global --add safe.directory "$CURRENT_DIR"
+# Mark parent repo directory as safe
+git config --global --add safe.directory /var/www
 
-# Pull latest code
+# Pull latest code and capture output
 echo "Pulling latest code from Git..."
 GIT_OUTPUT=$(git pull origin master 2>&1)
 echo "$GIT_OUTPUT"
 echo "$GIT_OUTPUT <- This is the git result"
 
-# Check if pull was successful
+# Analyze git result
 if [[ "$GIT_OUTPUT" == *"Already up to date."* ]]; then
     echo "No changes were pulled."
 elif [[ "$GIT_OUTPUT" == *"Updating"* ]]; then
