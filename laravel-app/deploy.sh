@@ -11,9 +11,6 @@ git pull origin master
 chmod -R 775 storage
 chmod -R 775 bootstrap/cache
 
-# Install dependencies (optional)
-composer install --no-interaction --prefer-dist --optimize-autoloader
-
 # Run Laravel commands
 php artisan migrate --force
 php artisan config:clear
