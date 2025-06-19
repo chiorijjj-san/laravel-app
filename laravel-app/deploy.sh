@@ -5,7 +5,7 @@ echo "Starting Deployment..."
 cd /var/www/laravel-app || exit
 
 # Pull latest code
-git pull origin main
+git pull origin master
 
 # Set permissions
 chmod -R 775 storage
