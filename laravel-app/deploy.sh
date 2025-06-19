@@ -7,7 +7,9 @@ cd /var/www/laravel-app || { echo "❌ Failed to cd into laravel-app"; exit 1; }
 
 # Fix ownership of .git files to avoid Git permission errors
 echo "🔧 Fixing .git folder ownership (if needed)..."
-chown -R "$(christianjariol_dev):$(christianjariol_dev)" .git 2>/dev/null
+#!/bin/bash
+sudo chown -R christianjariol_dev:christianjariol_dev /var/www
+echo "✅ Permissions fixed."
 
 # Mark the Git directory as safe
 echo "✅ Marking /var/www as a safe Git directory..."
