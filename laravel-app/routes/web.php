@@ -41,7 +41,7 @@ Route::get('/vmdeployer', function (Request $request) {
     // }
 
     $output = shell_exec('sh ' . base_path('deploy.sh'));
-
+    print_r($output);
     return response($output, 200);
 });
 
