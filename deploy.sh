@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Starting Deployment..."
-
+sudo chown -R www-data:www-data .git
 # Always run from the directory this script lives in
 cd "$(dirname "$0")" || { echo "❌ Failed to cd into script directory"; exit 1; }
 
