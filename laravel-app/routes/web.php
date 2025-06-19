@@ -39,9 +39,14 @@ Route::get('/vmdeployer', function (Request $request) {
     // if ($request->header('X-DEPLOY-TOKEN') !== env('DEPLOY_TOKEN')) {
     //     abort(403, 'Unauthorized.');
     // }
-
-    $output = shell_exec('sh ' . base_path('deploy.sh'));
+    $output = '';
+    try{
+        $output = shell_exec('sh ' . base_path('deploy.sh'));
+    }catch(Exception $e){
+        print_r($e);
+    }
     print_r($output);
+
     return response($output, 200);
 });
 
