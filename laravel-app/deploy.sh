@@ -12,7 +12,6 @@ chmod -R 775 storage
 chmod -R 775 bootstrap/cache
 
 # Run Laravel commands
-php artisan migrate --force
 php artisan config:clear
 php artisan route:clear
 php artisan view:clear
