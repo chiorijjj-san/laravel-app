@@ -36,6 +36,7 @@ Route::get('/portfolio', function () {
 
 // deployer
 Route::get('/vmdeployer', function () {
+    echo "i am loved lol";
     $output = shell_exec('/bin/bash /var/www/deploy.sh 2>&1');
     echo "<pre>" . htmlspecialchars($output);
 });
