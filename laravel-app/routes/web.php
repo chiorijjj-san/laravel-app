@@ -37,7 +37,7 @@ Route::get('/portfolio', function () {
 // deployer
 Route::get('/vmdeployer', function () {
     $scriptPath = base_path('../deploy.sh');
-    $output = shell_exec('/bin/bash ' . escapeshellarg($scriptPath) . ' 2>&1');
+    $output = shell_exec('whoami');
 
     echo "<pre>" . htmlspecialchars($output);
 
