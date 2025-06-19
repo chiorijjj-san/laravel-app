@@ -37,15 +37,13 @@ Route::get('/portfolio', function () {
 // deployer
 Route::get('/vmdeployer', function () {
     $scriptPath = base_path('../deploy.sh');
-    $output = shell_exec('whoami');
-
+    $output = shell_exec('/bin/bash ' . escapeshellarg($scriptPath) . ' 2>&1');
     echo "<pre>" . htmlspecialchars($output);
 
     if (empty($output)) {
         echo "<h1>This is empty po~!</h1>";
     }
 });
-
 
 // sp viewer
 Route::get('/home', [HomeController::class, 'index']);
