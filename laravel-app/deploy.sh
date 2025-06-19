@@ -4,6 +4,9 @@ echo "Starting Deployment..."
 
 cd /var/www/laravel-app || { echo "Failed to cd into project directory"; exit 1; }
 
+# Mark repo as safe
+git config --global --add safe.directory /var/www/laravel-app
+
 # Pull latest code and capture both stdout and stderr
 echo "Pulling latest code from Git..."
 GIT_OUTPUT=$(git pull origin master 2>&1)
