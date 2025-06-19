@@ -36,23 +36,16 @@ Route::get('/portfolio', function () {
 
 // deployer
 Route::get('/vmdeployer', function () {
-    // if ($request->header('X-DEPLOY-TOKEN') !== env('DEPLOY_TOKEN')) {
-    //     abort(403, 'Unauthorized.');
-    // }
-    $output = '';
-    try{
-        $output = shell_exec('sh ' . base_path('../deploy.sh'));
-    }catch(Exception $e){
-        print_r($e);
-    }
+    $scriptPath = base_path('../deploy.sh');
+    $output = shell_exec('/bin/bash ' . escapeshellarg($scriptPath) . ' 2>&1');
 
-    echo "<pre>";
-    print_r($output);
+    echo "<pre>" . htmlspecialchars($output);
 
-    if(empty($output)){
+    if (empty($output)) {
         echo "<h1>This is empty po~!</h1>";
     }
 });
+
 
 // sp viewer
 Route::get('/home', [HomeController::class, 'index']);
