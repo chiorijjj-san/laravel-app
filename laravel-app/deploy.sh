@@ -8,7 +8,7 @@ cd /var/www/laravel-app || { echo "Failed to cd into project directory"; exit 1;
 echo "Pulling latest code from Git..."
 GIT_OUTPUT=$(git pull origin master)
 echo "$GIT_OUTPUT"
-
+echo "$GIT_OUTPUT <- This is the git result";
 # Check if pull was successful
 if [[ "$GIT_OUTPUT" == *"Already up to date."* ]]; then
     echo "No changes were pulled."
