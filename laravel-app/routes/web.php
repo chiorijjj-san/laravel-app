@@ -36,9 +36,9 @@ Route::get('/portfolio', function () {
 
 // deployer
 Route::post('/vmdeployer', function (Request $request) {
-    if ($request->header('X-DEPLOY-TOKEN') !== env('DEPLOY_TOKEN')) {
-        abort(403, 'Unauthorized.');
-    }
+    // if ($request->header('X-DEPLOY-TOKEN') !== env('DEPLOY_TOKEN')) {
+    //     abort(403, 'Unauthorized.');
+    // }
 
     $output = shell_exec('sh ' . base_path('deploy.sh'));
 
