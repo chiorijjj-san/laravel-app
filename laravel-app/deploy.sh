@@ -1,18 +1,17 @@
 #!/bin/bash
 
-echo "Starting Deployment..."
+echo "🚀 Starting Deployment..."
 
-# Go to the Laravel project folder
-cd /var/www/laravel-app || { echo "❌ Failed to cd into laravel-app"; exit 1; }
+# Always run from the directory this script lives in
+cd "$(dirname "$0")" || { echo "❌ Failed to cd into script directory"; exit 1; }
 
 # Fix ownership of .git files to avoid Git permission errors
 echo "🔧 Fixing .git folder ownership (if needed)..."
-#!/bin/bash
-sudo chown -R christianjariol_dev:christianjariol_dev
+sudo chown -R "$(whoami):$(whoami)" .git
 
 # Mark the Git directory as safe
-echo "✅ Marking /var/www as a safe Git directory..."
-git config --global --add safe.directory /var/www
+echo "✅ Marking current directory as a safe Git directory..."
+git config --global --add safe.directory "$(pwd)"
 
 # Pull the latest code
 echo "⬇️ Pulling latest code from Git..."
