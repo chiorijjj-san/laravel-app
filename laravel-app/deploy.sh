@@ -2,11 +2,11 @@
 
 echo "Starting Deployment..."
 
-# Ensure script runs from its own folder
+# Change to the directory of this script
 cd "$(dirname "$0")" || { echo "Failed to change directory"; exit 1; }
 
-# Mark parent repo directory as safe
-git config --global --add safe.directory /var/www/laravel-app
+# Mark correct repo as safe
+git config --global --add safe.directory /workspaces/laravel-app
 
 # Pull latest code and capture output
 echo "Pulling latest code from Git..."
@@ -14,7 +14,7 @@ GIT_OUTPUT=$(git pull origin master 2>&1)
 echo "$GIT_OUTPUT"
 echo "$GIT_OUTPUT <- This is the git result"
 
-# Analyze git result
+# Check git output
 if [[ "$GIT_OUTPUT" == *"Already up to date."* ]]; then
     echo "No changes were pulled."
 elif [[ "$GIT_OUTPUT" == *"Updating"* ]]; then
