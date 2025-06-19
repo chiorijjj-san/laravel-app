@@ -2,11 +2,14 @@
 
 echo "Starting Deployment..."
 
-# Ensure Git allows working in current directory
+# Change to the directory where this script is located
+cd "$(dirname "$0")" || { echo "Failed to change directory"; exit 1; }
+
+# Mark repo as safe
 CURRENT_DIR=$(pwd)
 git config --global --add safe.directory "$CURRENT_DIR"
 
-# Pull latest code and capture both stdout and stderr
+# Pull latest code
 echo "Pulling latest code from Git..."
 GIT_OUTPUT=$(git pull origin master 2>&1)
 echo "$GIT_OUTPUT"
@@ -26,7 +29,7 @@ echo "Setting permissions..."
 chmod -R 775 storage
 chmod -R 775 bootstrap/cache
 
-# Run Laravel commands
+# Run Laravel artisan commands
 echo "Clearing Laravel caches..."
 php artisan config:clear
 php artisan route:clear
