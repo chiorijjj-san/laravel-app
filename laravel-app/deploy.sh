@@ -6,7 +6,7 @@ echo "Starting Deployment..."
 cd "$(dirname "$0")" || { echo "Failed to change directory"; exit 1; }
 
 # Mark parent repo directory as safe
-git config --global --add safe.directory /var/www
+git config --global --add safe.directory /var/www/laravel-app
 
 # Pull latest code and capture output
 echo "Pulling latest code from Git..."
