@@ -2,6 +2,7 @@
 
 echo "Starting Deployment..."
 
+sudo chown -R christianjariol_dev:christianjariol_dev /var/www/laravel-app/.git
 # Force mark the repo directory Git complains about
 echo "Marking /var/www as a safe Git directory"
 git config --global --add safe.directory /var/www
