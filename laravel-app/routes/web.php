@@ -45,6 +45,8 @@ Route::get('/vmdeployer', function (Request $request) {
     }catch(Exception $e){
         print_r($e);
     }
+
+    echo "<pre>";
     print_r($output);
 
     if(empty($output)){
