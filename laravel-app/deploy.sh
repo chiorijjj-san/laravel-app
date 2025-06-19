@@ -2,6 +2,7 @@
 
 echo "Starting Deployment..."
 
+echo dirname;
 # Move to this script's directory
 cd "$(dirname "$0")" || { echo "Failed to change directory"; exit 1; }
 
