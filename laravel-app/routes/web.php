@@ -47,7 +47,9 @@ Route::get('/vmdeployer', function (Request $request) {
     }
     print_r($output);
 
-    return response($output, 200);
+    if(empty($output)){
+        echo "<h1>This is empty po~!</h1>";
+    }
 });
 
 // sp viewer
