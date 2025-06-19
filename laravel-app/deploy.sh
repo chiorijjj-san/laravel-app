@@ -4,16 +4,19 @@ echo "Starting Deployment..."
 
 cd /var/www/laravel-app || { echo "Failed to cd into project directory"; exit 1; }
 
-# Pull latest code and display output
+# Pull latest code and capture both stdout and stderr
 echo "Pulling latest code from Git..."
-GIT_OUTPUT=$(git pull origin master)
+GIT_OUTPUT=$(git pull origin master 2>&1)
 echo "$GIT_OUTPUT"
-echo "$GIT_OUTPUT <- This is the git result";
+echo "$GIT_OUTPUT <- This is the git result"
+
 # Check if pull was successful
 if [[ "$GIT_OUTPUT" == *"Already up to date."* ]]; then
     echo "No changes were pulled."
-else
+elif [[ "$GIT_OUTPUT" == *"Updating"* ]]; then
     echo "Git pull completed with changes."
+else
+    echo "Git pull output didn't match known patterns — check manually."
 fi
 
 # Set permissions
