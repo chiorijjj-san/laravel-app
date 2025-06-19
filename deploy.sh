@@ -23,14 +23,8 @@ echo "$GIT_OUTPUT <- This is the git result"
 # Analyze pull result
 if [[ "$GIT_OUTPUT" == *"Already up to date."* ]]; then
     echo "✅ No changes were pulled."
-elif [[ "$GIT_OUTPUT" == *"Updating"* ]]; then
+elif [[ "$GIT_OUTPUT" == *"Updating"* ]];
     echo "✅ Git pull completed with changes."
-elif [[ "$GIT_OUTPUT" == *"Permission denied"* || "$GIT_OUTPUT" == *"cannot open '.git/FETCH_HEAD'"* ]]; then
-    echo "❌ Git pull failed: Permission denied. Check .git ownership."
-    echo "👉 Run: sudo chown -R $(whoami):$(whoami) .git"
-    exit 1
-else
-    echo "⚠️ Git pull output didn’t match known patterns — please check manually."
 fi
 
 # Set Laravel permissions
