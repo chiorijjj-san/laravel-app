@@ -99,7 +99,9 @@
             <input type="password" id="password" name="password" required>
 
             <button type="submit">Log In</button>
-
+            @error('email')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             <div class="register-link">
                 Don't have an account? <a href="{{ route('register') }}">Sign up</a>
             </div>
