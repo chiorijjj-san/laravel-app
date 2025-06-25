@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+@extends('layouts.head')
 <div class="min-h-screen bg-gradient-to-br from-indigo-600 to-purple-800 text-white flex flex-col items-center justify-center p-6">
     <div class="max-w-4xl w-full">
         <div class="text-center mb-10">
@@ -28,3 +28,4 @@
         </div>
     </div>
 </div>
+@extends('layouts.footer')
