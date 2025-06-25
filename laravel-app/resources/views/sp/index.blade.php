@@ -11,14 +11,14 @@
             <div class="bg-white text-gray-800 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform duration-200 cursor-pointer group">
                 <h2 class="text-2xl font-semibold mb-2 group-hover:text-indigo-600">🎮 Create a New Game</h2>
                 <p class="text-gray-600 mb-4">Start a fresh trivia battle. Customize your AI difficulty, number of players, or category.</p>
-                <a href="{{ route('game.create') }}" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Start Game</a>
+                <a href="" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Start Game</a>
             </div>
 
             <!-- Join Game -->
             <div class="bg-white text-gray-800 rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform duration-200 cursor-pointer group">
                 <h2 class="text-2xl font-semibold mb-2 group-hover:text-purple-600">🚀 Join a Game</h2>
                 <p class="text-gray-600 mb-4">Enter a room code to join a live trivia match with friends or strangers.</p>
-                <a href="{{ route('game.join') }}" class="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">Join Room</a>
+                <a href="" class="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">Join Room</a>
             </div>
         </div>
 
