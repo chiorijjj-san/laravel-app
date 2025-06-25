@@ -26,13 +26,13 @@
         <div class="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-6 hover:shadow-xl transition transform hover:-translate-y-1 border border-gray-700">
             <h2 class="text-3xl font-bold text-amber-400 mb-2">🎮 Create a New Game</h2>
             <p class="text-gray-300 mb-4">Host your own match — pick the AI difficulty, category, and rally your party.</p>
-            <a href="{{ route('game.create') }}" class="inline-block bg-amber-500 text-gray-900 px-5 py-2 rounded-full hover:bg-amber-400 transition">Start Game</a>
+            <a href="" class="inline-block bg-amber-500 text-gray-900 px-5 py-2 rounded-full hover:bg-amber-400 transition">Start Game</a>
         </div>
 
         <div class="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-6 hover:shadow-xl transition transform hover:-translate-y-1 border border-gray-700">
             <h2 class="text-3xl font-bold text-cyan-400 mb-2">🚀 Join a Game</h2>
             <p class="text-gray-300 mb-4">Have a code? Jump into a round and test your skills.</p>
-            <a href="{{ route('game.join') }}" class="inline-block bg-cyan-500 text-gray-900 px-5 py-2 rounded-full hover:bg-cyan-400 transition">Join Room</a>
+            <a href="" class="inline-block bg-cyan-500 text-gray-900 px-5 py-2 rounded-full hover:bg-cyan-400 transition">Join Room</a>
         </div>
     </section>
 
