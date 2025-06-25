@@ -31,13 +31,13 @@
         <div class="bg-white shadow-xl rounded-2xl p-6 hover:shadow-2xl transition border border-gray-200">
             <h2 class="text-2xl font-semibold text-[#4b3621] mb-2">🎮 Create a New Game</h2>
             <p class="text-gray-600 mb-4">Customize your game session — choose difficulty, category, and number of players. Ideal for party hosts or trivia masters!</p>
-            <a href="{{ route('game.create') }}" class="inline-block bg-[#a1744f] text-white px-4 py-2 rounded-lg hover:bg-[#926645] transition">Start Game</a>
+            <a href="" class="inline-block bg-[#a1744f] text-white px-4 py-2 rounded-lg hover:bg-[#926645] transition">Start Game</a>
         </div>
 
         <div class="bg-white shadow-xl rounded-2xl p-6 hover:shadow-2xl transition border border-gray-200">
             <h2 class="text-2xl font-semibold text-[#4b3621] mb-2">🚀 Join a Game</h2>
             <p class="text-gray-600 mb-4">Have a room code? Join your friends or a public trivia session instantly.</p>
-            <a href="{{ route('game.join') }}" class="inline-block bg-[#6e4f3a] text-white px-4 py-2 rounded-lg hover:bg-[#5e4030] transition">Join Room</a>
+            <a href="" class="inline-block bg-[#6e4f3a] text-white px-4 py-2 rounded-lg hover:bg-[#5e4030] transition">Join Room</a>
         </div>
     </section>
 
