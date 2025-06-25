@@ -14,10 +14,16 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 text-center">
+    <section class="pt-32 pb-16 text-center relative">
         <div class="max-w-5xl mx-auto px-4">
             <h1 class="text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow">🧠 Escoffier Trivia Arena</h1>
             <p class="text-lg text-gray-300 max-w-2xl mx-auto">Sharpen your mind in a real-time, AI-powered trivia challenge built for warriors of wit and champions of lore.</p>
+        </div>
+
+        <!-- Character Placeholder -->
+        <div class="absolute right-4 bottom-4 md:right-16 md:bottom-8 lg:right-32 lg:bottom-10 opacity-90 pointer-events-none">
+            <!-- Replace this image with your character ambassador -->
+            <img src="/images/placeholder-character.png" alt="Trivia Ambassador Character" class="w-52 md:w-64 lg:w-72 drop-shadow-xl">
         </div>
     </section>
 
