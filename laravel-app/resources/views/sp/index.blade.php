@@ -23,7 +23,7 @@
         <!-- Character Placeholder -->
         <div class="absolute right-4 bottom-4 md:right-16 md:bottom-8 lg:right-32 lg:bottom-10 opacity-90 pointer-events-none">
             <!-- Replace this image with your character ambassador -->
-            <img src="/images/ambassador.png" alt="Trivia Ambassador Character" class="w-52 md:w-64 lg:w-72 drop-shadow-xl">
+            <img src="{{ asset('images/ambassador.png') }}" alt="Trivia Ambassador Character" class="w-52 md:w-64 lg:w-72 drop-shadow-xl">
         </div>
     </section>
 
