@@ -45,8 +45,3 @@ Route::get('/vmdeployer', function () {
 // sp viewer
 Route::get('/home', [HomeController::class, 'index']);
 
-
-// 
-Route:middleware(['admin'])->group(function(){
-    
-});
